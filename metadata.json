@@ -1,0 +1,7 @@
+{
+  "name": "Copy of Golden Fortune Lucky Draw",
+  "description": "A premium lucky draw application featuring a 6-slot animated spinner, admin prize management, and a live results leaderboard. Includes simulated CSV persistence and atmospheric audio.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
