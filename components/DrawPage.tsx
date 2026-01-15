@@ -122,13 +122,13 @@ const DrawPage: React.FC = () => {
         <header className="space-y-4">
           <div className="flex items-center justify-center gap-4 mb-2">
              <div className="h-[1px] w-12 bg-yellow-500/30 rounded-full"></div>
-             <span className="text-yellow-500/80 font-black tracking-[0.5em] text-[10px] uppercase">TSMC AZ Fab Site</span>
+             <span className="text-yellow-500/80 font-black tracking-[0.5em] text-[10px] uppercase">Dylan Lottery </span>
              <div className="h-[1px] w-12 bg-yellow-500/30 rounded-full"></div>
           </div>
           <h1 className="text-5xl md:text-8xl font-black text-white tracking-tighter drop-shadow-2xl">
-            WAFER <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 via-orange-500 to-yellow-600">FORTUNE</span>
+            FABX1 <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 via-orange-500 to-yellow-600">GO</span>
           </h1>
-          <p className="text-slate-500 text-sm font-bold tracking-[0.4em] uppercase">Yield Performance Recognition</p>
+          <p className="text-slate-500 text-sm font-bold tracking-[0.4em] uppercase">2026 Spring party</p>
         </header>
 
         <div className="bg-slate-900/40 p-8 md:p-12 rounded-[3.5rem] border border-white/5 backdrop-blur-3xl shadow-[0_0_100px_rgba(0,0,0,0.8)] space-y-10 relative overflow-hidden">
