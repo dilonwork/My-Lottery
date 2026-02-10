@@ -88,42 +88,43 @@ const ResultsPage: React.FC = () => {
             <h3 className="text-xl text-slate-600 font-bold tracking-[0.4em] uppercase">Syncing with Mainframe Log...</h3>
           </div>
         ) : (
-          <div key={currentPrizeName} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 animate-in fade-in slide-in-from-bottom-12 duration-1000">
-            {currentWinners.map((winner, idx) => (
-              <div
-                key={winner.id}
-                className="group relative p-8 rounded-[2rem] border transition-all duration-500 hover:-translate-y-2 backdrop-blur-3xl bg-slate-900/40 border-slate-800/50 hover:border-slate-700 shadow-2xl"
-              >
-                <div className="flex justify-between items-start mb-8">
-                  <div className="flex flex-col">
-                    <span className="text-[10px] font-black uppercase tracking-widest mb-1 text-slate-600">
-                      Operator ID
-                    </span>
-                    <span className="text-white/80 font-mono font-bold text-sm tracking-widest">
+          <div key={currentPrizeName} className="overflow-x-auto animate-in fade-in slide-in-from-bottom-12 duration-1000">
+            <table className="min-w-full divide-y divide-slate-700 rounded-lg shadow-xl overflow-hidden">
+              <thead className="bg-slate-800">
+                <tr>
+                  <th scope="col" className="px-6 py-3 text-left text-xs font-black uppercase tracking-widest text-slate-400">
+                    Operator ID
+                  </th>
+                  <th scope="col" className="px-6 py-3 text-left text-xs font-black uppercase tracking-widest text-slate-400">
+                    Name
+                  </th>
+                  <th scope="col" className="px-6 py-3 text-left text-xs font-black uppercase tracking-widest text-slate-400">
+                    Department
+                  </th>
+                  <th scope="col" className="px-6 py-3 text-left text-xs font-black uppercase tracking-widest text-slate-400">
+                    Batch Recorded
+                  </th>
+                </tr>
+              </thead>
+              <tbody className="bg-slate-900 divide-y divide-slate-800">
+                {currentWinners.map((winner, idx) => (
+                  <tr key={winner.id} className="hover:bg-slate-800 transition-colors duration-200">
+                    <td className="px-6 py-4 whitespace-nowrap text-sm font-mono text-white/80">
                       {winner.employeeNo}
-                    </span>
-                  </div>
-                  <i className="fas fa-microchip text-2xl text-slate-800 group-hover:text-yellow-500/30 transition-colors"></i>
-                </div>
-
-                <div className="space-y-4">
-                  <h3 className="text-4xl font-black tracking-tight text-white group-hover:text-yellow-500 transition-colors">
-                    {winner.name}
-                  </h3>
-                  <div className="space-y-2">
-                    <div className="flex items-center gap-3 text-xs font-black text-slate-500 uppercase tracking-widest">
-                      <i className="fas fa-building text-slate-700 w-4"></i>
+                    </td>
+                    <td className="px-6 py-4 whitespace-nowrap text-lg font-black text-white">
+                      {winner.name}
+                    </td>
+                    <td className="px-6 py-4 whitespace-nowrap text-sm text-slate-400">
                       {winner.department}
-                    </div>
-                  </div>
-                </div>
-
-                <div className="mt-10 pt-6 border-t border-slate-800/50 text-[10px] text-slate-600 font-black uppercase tracking-[0.3em] flex justify-between items-center">
-                  <span>Batch Recorded</span>
-                  <span>{winner.drawTime}</span>
-                </div>
-              </div>
-            ))}
+                    </td>
+                    <td className="px-6 py-4 whitespace-nowrap text-sm text-slate-500">
+                      {winner.drawTime}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
           </div>
         )}
 
