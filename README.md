@@ -29,7 +29,7 @@ This page displays the live results of the lottery draws. Winners are presented 
 
 此頁面顯示彩票抽獎的即時結果。中獎者以清晰的表格形式呈現，方便快速瀏覽。當數據載入時，會顯示「正在同步主機日誌...」訊息。
 
-![Live Results Page Screenshot](/Users/dylanhsieh/.openclaw/media/browser/05126365-b83d-4043-b9c0-2b8685a9aae7.png)
+![Live Results Page Screenshot](./images/live-results-screenshot.png)
 
 _Note: The screenshot above shows the loading state of the Live Results page. Once data is available, winners will populate the table._
 _注意：以上截圖顯示了即時結果頁面的載入狀態。一旦數據可用，中獎者將填充表格。_
