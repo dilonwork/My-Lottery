@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="600" viewBox="0 0 900 600" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#64748b"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="900" height="600" fill="#0f172a"/>
+  <text x="450" y="44" text-anchor="middle" font-size="26" font-weight="700" fill="#fbbf24">My-Lottery: Golden Fortune Lucky Draw</text>
+  <text x="450" y="70" text-anchor="middle" font-size="14" fill="#94a3b8">Page flow and data sources — all client-side, no backend</text>
+
+  <!-- Draw Page -->
+  <rect x="40" y="120" width="250" height="190" rx="12" fill="#1e293b" stroke="#fbbf24" stroke-width="2"/>
+  <text x="165" y="150" text-anchor="middle" font-size="16" font-weight="700" fill="#fbbf24">Draw Page</text>
+  <text x="165" y="176" text-anchor="middle" font-size="12" fill="#cbd5e1">6-slot animated spinner</text>
+  <text x="165" y="194" text-anchor="middle" font-size="12" fill="#cbd5e1">(Slot.tsx, digits 0-9 A-F)</text>
+  <text x="165" y="216" text-anchor="middle" font-size="12" fill="#cbd5e1">Prize picker (remaining &gt; 0)</text>
+  <text x="165" y="234" text-anchor="middle" font-size="12" fill="#cbd5e1">Tension / success audio (mixkit)</text>
+  <text x="165" y="256" text-anchor="middle" font-size="12" fill="#cbd5e1">AI congrats message per winner</text>
+  <text x="165" y="278" text-anchor="middle" font-size="12" fill="#cbd5e1">Records winner to CSV store</text>
+
+  <!-- Admin Page -->
+  <rect x="325" y="120" width="250" height="190" rx="12" fill="#1e293b" stroke="#38bdf8" stroke-width="2"/>
+  <text x="450" y="150" text-anchor="middle" font-size="16" font-weight="700" fill="#38bdf8">Admin Page</text>
+  <text x="450" y="176" text-anchor="middle" font-size="12" fill="#cbd5e1">Login (credentials in</text>
+  <text x="450" y="194" text-anchor="middle" font-size="12" fill="#cbd5e1">constants.ts)</text>
+  <text x="450" y="216" text-anchor="middle" font-size="12" fill="#cbd5e1">Manage participants &amp; prizes</text>
+  <text x="450" y="234" text-anchor="middle" font-size="12" fill="#cbd5e1">CSV template download</text>
+  <text x="450" y="252" text-anchor="middle" font-size="12" fill="#cbd5e1">CSV file upload / import</text>
+
+  <!-- Results Page -->
+  <rect x="610" y="120" width="250" height="190" rx="12" fill="#1e293b" stroke="#a78bfa" stroke-width="2"/>
+  <text x="735" y="150" text-anchor="middle" font-size="16" font-weight="700" fill="#a78bfa">Results Page</text>
+  <text x="735" y="176" text-anchor="middle" font-size="12" fill="#cbd5e1">Live leaderboard</text>
+  <text x="735" y="194" text-anchor="middle" font-size="12" fill="#cbd5e1">Auto-refreshes every 5s</text>
+  <text x="735" y="216" text-anchor="middle" font-size="12" fill="#cbd5e1">Winners grouped by prize</text>
+  <text x="735" y="234" text-anchor="middle" font-size="12" fill="#cbd5e1">Prize carousel navigation</text>
+
+  <!-- Services -->
+  <rect x="40" y="370" width="390" height="160" rx="12" fill="#1e293b" stroke="#34d399" stroke-width="2"/>
+  <text x="235" y="400" text-anchor="middle" font-size="16" font-weight="700" fill="#34d399">dataService (services/dataService.ts)</text>
+  <text x="235" y="428" text-anchor="middle" font-size="12" fill="#cbd5e1">Persists to browser localStorage:</text>
+  <text x="235" y="450" text-anchor="middle" font-size="12" fill="#cbd5e1">• lottery_participants (JSON)</text>
+  <text x="235" y="470" text-anchor="middle" font-size="12" fill="#cbd5e1">• lottery_prizes (JSON)</text>
+  <text x="235" y="490" text-anchor="middle" font-size="12" fill="#cbd5e1">• lottery_winners_csv (simulated CSV file)</text>
+  <text x="235" y="510" text-anchor="middle" font-size="11" fill="#94a3b8">Seeded with INITIAL_PARTICIPANTS / INITIAL_PRIZES</text>
+
+  <rect x="470" y="370" width="390" height="160" rx="12" fill="#1e293b" stroke="#f472b6" stroke-width="2"/>
+  <text x="665" y="400" text-anchor="middle" font-size="16" font-weight="700" fill="#f472b6">geminiService (services/geminiService.ts)</text>
+  <text x="665" y="428" text-anchor="middle" font-size="12" fill="#cbd5e1">@google/genai → gemini-3-flash-preview</text>
+  <text x="665" y="450" text-anchor="middle" font-size="12" fill="#cbd5e1">Generates a 1-sentence congrats</text>
+  <text x="665" y="470" text-anchor="middle" font-size="12" fill="#cbd5e1">message in Traditional Chinese</text>
+  <text x="665" y="490" text-anchor="middle" font-size="12" fill="#cbd5e1">Needs GEMINI_API_KEY in .env.local</text>
+  <text x="665" y="510" text-anchor="middle" font-size="11" fill="#94a3b8">Falls back to a canned message without a key</text>
+
+  <!-- Arrows -->
+  <line x1="165" y1="310" x2="235" y2="362" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="450" y1="310" x2="450" y2="362" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="735" y1="310" x2="665" y2="362" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="310" y1="240" x2="500" y2="240" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)" stroke-dasharray="6,4"/>
+  <line x1="290" y1="450" x2="462" y2="450" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="450" y="566" text-anchor="middle" font-size="11" fill="#64748b">Hand-drawn diagram — the code in the repo is the source of truth</text>
+</svg>
